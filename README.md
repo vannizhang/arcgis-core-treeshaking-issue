@@ -22,21 +22,21 @@ npm run build
 ```
 
 ## Reproduce the Treeshaking Issue 
-Open the [`/src/index.tsx`](./src/index.tsx) file, you'll notice that only the following modules from `@arcgis/code` are explicitly included:
+Open the [`/src/index.tsx`](./src/index.tsx) file, you'll notice that only the Portal module from `@arcgis/code` is explicitly included:
 
 ```js
-import OAuthInfo from '@arcgis/core/identity/OAuthInfo';
-import esriId from '@arcgis/core/identity/IdentityManager';
+// import OAuthInfo from '@arcgis/core/identity/OAuthInfo';
+// import esriId from '@arcgis/core/identity/IdentityManager';
 import Portal from '@arcgis/core/portal/Portal';
-import Credential from '@arcgis/core/identity/Credential';
-import PortalUser from '@arcgis/core/portal/PortalUser';
+// import Credential from '@arcgis/core/identity/Credential';
+// import PortalUser from '@arcgis/core/portal/PortalUser';
 
 console.log(
-    OAuthInfo,
-    esriId,
+    // OAuthInfo,
+    // esriId,
     Portal,
-    Credential,
-    PortalUser
+    // Credential,
+    // PortalUser
 )
 ```
 
