@@ -1,27 +1,13 @@
-import './styles/index.css';
+import OAuthInfo from '@arcgis/core/identity/OAuthInfo';
+import esriId from '@arcgis/core/identity/IdentityManager';
+import Portal from '@arcgis/core/portal/Portal';
+import Credential from '@arcgis/core/identity/Credential';
+import PortalUser from '@arcgis/core/portal/PortalUser';
 
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { Provider as ReduxProvider } from 'react-redux';
-
-import configureAppStore, { getPreloadedState } from './store/configureStore';
-
-import AppContextProvider from './contexts/AppContextProvider';
-
-import { ToDoList } from '@components/ToDo/ToDoList';
-
-(async () => {
-    const preloadedState = getPreloadedState();
-
-    const root = createRoot(document.getElementById('root'));
-
-    root.render(
-        <React.StrictMode>
-            <ReduxProvider store={configureAppStore(preloadedState)}>
-                <AppContextProvider>
-                    <ToDoList />
-                </AppContextProvider>
-            </ReduxProvider>
-        </React.StrictMode>
-    );
-})();
+console.log(
+    OAuthInfo,
+    esriId,
+    Portal,
+    Credential,
+    PortalUser
+)
