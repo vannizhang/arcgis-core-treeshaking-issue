@@ -1,6 +1,28 @@
-## `@arcgis/core` Treeshaking Issue
+# `@arcgis/core` Treeshaking Issue
 
-Open the `/src/index.tsx` file, you'll notice that only the following modules from `@arcgis/code` are explicitly included:
+## Getting Started
+Fork this repository and clone your fork to your computer, from the project's root directory, install the required packages (dependencies):
+
+```sh
+npm install
+```
+
+To run and test the app on your local machine (http://localhost:8080):
+
+```sh
+# it will start a server instance and begin listening for connections from localhost on port 8080
+npm run start
+```
+
+To build/deploye the app, you can run:
+
+```sh
+# it will place all files needed for deployment into the /dist directory 
+npm run build
+```
+
+## Reproduce the Treeshaking Issue 
+Open the [`/src/index.tsx`](./src/index.tsx) file, you'll notice that only the following modules from `@arcgis/code` are explicitly included:
 
 ```js
 import OAuthInfo from '@arcgis/core/identity/OAuthInfo';
